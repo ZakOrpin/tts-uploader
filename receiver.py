@@ -1,5 +1,3 @@
-import sublime
-import sublime_plugin
 import socket
 import json
 
@@ -33,6 +31,12 @@ def get_scripts():
                 if not data: break
                 full_data += data.decode("UTF-8")
     print(json.dumps(full_data, indent=4))
+    print("\n\n-------------------------")
+    # print(json.loads(full_data)['scriptStates']['name'])
+    json_string = json.loads(full_data)
+    for script in json_string['scriptStates']:
+        print(json.dumps(script, indent=4))
+        print("---------------")
 
-# get_scripts()
+get_scripts()
 
