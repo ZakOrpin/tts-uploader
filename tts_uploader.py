@@ -4,7 +4,7 @@ import sublime_plugin
 import socket
 import json
 
-class tts_open_filer(sublime_plugin.TextCommand):
+class tts_open_file(sublime_plugin.TextCommand):
 
     def run(self, edit):
         self.scripts = self.get_scripts()
@@ -62,12 +62,12 @@ class tts_open_filer(sublime_plugin.TextCommand):
         new_view.run_command('tts_writer', {"contents": contents})
         # current_view = self.active_window()
 
-class tts_writer(sublime_plugin.TextCommand):
+class tts_write(sublime_plugin.TextCommand):
     def run(self, edit, contents):
         # print(contents)
         self.view.insert(edit, 0, contents)
 
-class tts_saverr(sublime_plugin.TextCommand):
+class tts_saver(sublime_plugin.TextCommand):
     def run(self, edit):
         current_window = sublime.active_window()
         current_view = current_window.active_view()
