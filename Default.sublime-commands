@@ -1,0 +1,6 @@
+[
+
+    { "caption": "TTS: Get Obj", "command": "tts_open_file" },
+    { "caption": "TTS: Save Obj", "command": "tts_saver" },
+
+]
